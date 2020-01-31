@@ -5,10 +5,41 @@
          version="4.0">
     <servlet>
         <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>HelloServlet</servlet-class>
+        <servlet-class>Servlets.HelloServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>HelloServlet</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MathsServlet</servlet-name>
+        <servlet-class>Servlets.MathsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MathsServlet</servlet-name>
+        <url-pattern>/Maths</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CheckAttributeServlet</servlet-name>
+        <servlet-class>Servlets.CheckAttributeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckAttributeServlet</servlet-name>
+        <url-pattern>/Check</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/Errors/40X.html</location>
+    </error-page>
+    <error-page>
+        <error-code>400</error-code>
+        <location>/Errors/40X.html</location>
+    </error-page>
+
 </web-app>
